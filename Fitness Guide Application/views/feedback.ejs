@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="UTF-8">
+  <title>
+  Feedback
+  </title>
+
+
+<link rel="stylesheet" type="text/css" href="/assets/stylesheet/mystyle.css">
+</head>
+<body>
+<div>
+<% include navigation/header.ejs %>
+</div>
+<div>
+<% include navigation/user-navigation.ejs %>
+</div>
+<% include navigation/site-navigation.ejs %>
+<div>
+      <%
+      let itemList=[];
+      for(let j=0;j< userItems.length; j++)
+      {
+        itemList.push(userItems[j].item.itemCode);
+      }
+
+      %>
+      <aside>
+      <div class="exercise_containts">
+      <h2> Give your feedback for </h2>
+      <br>
+      <div class="feedback_contents">
+      <h2 id="barbell_title"><%= item.itemName %></h2>
+      <p><%= item.itemCategory %></p>
+      <br>
+      <img class="workout_Image" src="<%= item.itemURL %>" alt="Workout Image">
+      <br>
+      <br>
+      </div>
+      <p>  <%= item.itemDescription %> </p>
+      <br>
+      <p>
+      <b>Rating</b>
+      &nbsp; &nbsp;
+      <form method="Post" action="/profile/myItems" id="rating_form">
+      <select name="select" id="sel">
+      <option value="0">0 star </option>
+      <option value="1">1 star &#9733;</option>
+      <option value="2">2 star &#9733; &#9733;</option>
+      <option value="3">3 star &#9733; &#9733; &#9733; </option>
+      <option value="4">4 star &#9733; &#9733; &#9733; &#9733;</option>
+      <option value="5">5 star &#9733; &#9733; &#9733; &#9733; &#9733;</option>
+
+    </select>
+    &nbsp;
+       <input type="hidden" name="action" value="updateRating">
+       <input name="itemCode" type="hidden" value="<%= item.itemCode %>" />
+       <input type="hidden" name="itemList" value="<%= itemList %>"/>
+      <a href="javascript:{}" onclick="document.getElementById('rating_form').submit();" class="feedback_button">Confirm Rating</a>
+      &nbsp;
+    </form>
+
+    <form method="Post" action="/profile/myItems" id="madeit_form">
+    <input type="hidden" name="action" value="updateFlag">
+    <input name="itemCode" type="hidden" value="<%= item.itemCode %>" />
+    <input type="hidden" name="itemList" value="<%= itemList %>"/>
+
+    <input type="radio" id="madeIttrue" name="madeit" value="true" checked><label for="madeIttrue">Yes</label>
+    <input type="radio" id="madeItfalse" name="madeit" value="false" ><label for="madeItfalse">No</label>
+    <a href="javascript:{}" onclick="document.getElementById('madeit_form').submit();" class="feedback_button">I made it</a>
+  </form>
+  <script type="text/javascript">
+ let sa = document.getElementById('sel').value = "<%= rating %>";
+ if(<%= madeIt %> == true)
+ {
+   document.getElementById("madeIttrue").checked = true;
+   document.getElementById("madeItfalse").checked = false;
+ }
+ else {
+   document.getElementById("madeIttrue").checked = false;
+   document.getElementById("madeItfalse").checked = true;
+ }
+  </script>
+
+      </p>
+  </div>
+      </aside>
+</div>
+      <% include navigation/footer.ejs %>
+</body>
+</html>

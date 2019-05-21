@@ -1,0 +1,487 @@
+.sign_in{
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  top:20px;
+  right: 90px;
+  font-size: 14px;
+  color: white;
+
+}
+.btn_star_align_div a,form {
+  display: inline-block;
+
+}
+.home_text ul li{
+  color: white;
+
+}
+.about_div h3,h2{
+  font-style: italic;
+  font-family: cursive;
+}
+.login_div{
+  float: left;
+  width: 770px;
+}
+.login_div h1,p{
+  font-style: italic;
+  font-family: cursive;
+
+}
+.login_div h1{
+text-shadow: 2px 2px  grey;
+}
+.about_div p,h4, li{
+  font-family: cursive;
+
+}
+.login_button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#color_id{
+  text-shadow: 2px 2px 4px green;
+  color:white;
+
+}
+.wrk_title{
+  font-size: 35px;
+  font-family:sans-serif;
+  color: #004d1a;
+  text-shadow: 2px 2px 4px #000000;
+}
+.a_button{
+   display: inline-block;
+   width: 90px;
+   height: 25px;
+   background:green;
+   padding: 8px;
+   text-align: center;
+   border-radius: 5px;
+   color: white;
+
+}
+.feedback_button{
+   display: inline-block;
+   width: 130px;
+   height: 20px;
+   background:green;
+   padding: 8px;
+   text-align: center;
+   border-radius: 5px;
+   color: white;
+
+}
+
+
+.save_image{
+  width: 20px;
+  margin-right: 2px;
+  height: 15px;
+}
+
+.exercise_containts ul li a{
+   text-decoration: none;
+   color: black;
+
+}
+.exercise_containts ul li a:hover{
+   text-decoration: none;
+   color: #ff704d;
+
+}
+.btn_star_align_div{
+  vertical-align: middle;
+
+}
+.filled_star{
+  font-size: 30px;
+  position: static;
+  vertical-align: inherit;
+  color: green;
+}
+ol li{
+  margin-left: 140px;
+}
+
+.workout {
+  float: left;
+  margin-right:25px;
+  padding-left: : 50px;
+  padding-right: 30px;
+  height: 200px;
+  width: 400px;
+}
+.feedback_contents{
+  text-align: center;
+}
+footer p{
+  font-size: 15px;
+}
+
+.web_title{
+  font-style: italic;
+  font-family: cursive;
+  color: white;
+  position: absolute;
+  top: 90px;
+  left: 600px;
+
+}
+
+h1{
+  font-size: 40px;
+  font-style: italic;
+  font-family: sans-serif;
+
+}
+
+.workout_Image{
+  height: 200px;
+  width: 400px;
+  margin-left: 15px;
+}
+
+
+
+.barbell{
+  text-align: center;
+  vertical-align: middle;
+}
+.done_img{
+  height: 25px;
+  width: 25px;
+
+}
+
+.dumbell_sym{
+  height: 20px;
+  width: 20px;
+}
+
+table{
+  border-bottom: solid;
+  border-width: 2px;
+  border-color: blue;
+}
+.myitem_bottom_content{
+  margin-top: 200px;
+  position: inherit;
+  text-align: left;
+}
+
+table th{
+  border-bottom: solid;
+  border-top: solid;
+  border-width: 2px;
+  border-color: blue;
+}
+table,tr,th,td{
+
+  padding: 9px;
+  margin: 2px;
+  vertical-align: middle;
+  align: center;
+  text-align: center;
+}
+button img{
+  height: 13px;
+  width: 13px;
+}
+
+.item_barbell{
+  text-align: left;
+  padding: 7px;
+  font-size: 18px;
+
+}
+
+.barbell_gif{
+ float: left;
+ height: 270px;
+
+}
+.barbelldiv{
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  width: 1100px;
+
+
+}
+.home_container{
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px  grey;
+
+}
+.about_div h2{
+  text-shadow: 2px 2px  grey;
+
+}
+.footer_div{
+  text-shadow: 1px 1px  grey;
+}
+.home_text{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 25px;
+
+}
+
+a:visited{
+  text-decoration: none;
+}
+
+
+ul{
+
+  margin-left: 260px;
+}
+ul li{
+  padding-left: 5px;
+  margin: 7px;
+  list-style-type: none;
+  color: 	 #0d0d0d;
+  font-style: italic;
+
+}
+.biceps{
+  clear: both;
+}
+
+.shoulder{
+  clear:both;
+}
+
+.triceps{
+  clear:both;
+}
+
+.home_img{
+  height: 200px;
+  width: 200px;
+}
+.home_exc_img{
+  height: 160px;
+  width: 180px;
+}
+
+aside,footer,header,main,nav{
+  display: block;
+}
+
+#barbell_title{
+  text-shadow: 2px 2px 4px grey;
+  color: green;
+}
+
+html,body, h1,h2,h3,ul,li,a,p,footer,header,main,nav
+{
+  padding: 0px;
+  margin: 0px;
+}
+
+.head{
+
+
+  border-style: solid;
+  border-width:  2px;
+  border-color: black;
+  text-align: center;
+  font-family: cursive;
+
+}
+.head_back_image{
+width: 1380px;
+height: 150px;
+}
+
+a{
+text-decoration: none;
+list-style-type: none;
+}
+
+ul {
+  list-style-type: none;
+}
+.main_links li a {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-right: 2px;
+  border-color: white;
+}
+.main_links li a:hover {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: grey;
+
+  padding: 14px 16px;
+
+  border-right: 2px;
+  border-color: white;
+}
+
+
+body{
+  width: 1400px;
+  height: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 15px;
+}
+
+.main_links{
+  background-color: #333;
+  text-align: center;
+  padding: 6px;
+  margin-top: 2px;
+  border-style: solid;
+  border-width:  2px;
+  border-color: black;
+
+}
+aside{
+  border: 2px;
+  border-color: black;
+  height: 550px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  float: right;
+  width: 84%;
+  padding:  10px;
+  font-size: 20px;
+  border-style: solid;
+  border-width:  2px;
+  border-color: black;
+}
+iframe{
+  height: 550px;
+  width: 1050px;
+  border:none;
+}
+
+.page_links{
+
+
+  height: 550px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding:  10px;
+  width: 12%;
+  float: left;
+  border-style: solid;
+  border-width:  2px;
+  border-color: black;
+
+}
+.page_link_div{
+
+ background-color: #303030;
+height: 550px;
+}
+
+li{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.main_links ul li{
+   display: inline;
+
+}
+
+.page_links ul{
+  padding: 10px;
+}
+.page_links ul li{
+  margin: 10px;
+  margin-top: 18px;
+}
+.page_links ul li a{
+ text-decoration: none;
+ font-size: 19px;
+ color: white;
+ font-weight: bold;
+ font-family:monospace;
+}
+
+
+.page_links ul li a:hover{
+
+  color:  grey;
+
+}
+.exercise_containts{
+  width: 1170px;
+  height: 560px;
+  overflow: scroll;
+  background-color:  #f2f2f2;
+
+}
+.home_wal_image{
+  width: 1180px;
+  height: 550px;
+}
+
+.footer_div{
+  float: left;
+  width: 770px;
+
+}
+
+.footer_img{
+  float: right;
+    width: 300px;
+}
+
+.footer_img img{;
+    width: 300px;
+    height: 450px;
+}
+
+
+
+.workout_plan_containts{
+   width: 1170px;
+   height: 560px;
+   overflow: scroll;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+
+}
+
+.star{
+
+  margin-left: 9px;
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+}
+
+footer{
+  background-color: #333;
+  color: white;
+  margin-top: 10px;
+  padding: 10px;
+  clear: both;
+  border-style: solid;
+  border-width:  2px;
+  border-color: black;
+
+}

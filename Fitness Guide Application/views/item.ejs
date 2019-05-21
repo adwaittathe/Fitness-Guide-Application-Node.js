@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="UTF-8">
+  <title>
+  FITNESS GUIDE
+  </title>
+  
+<link rel="stylesheet" type="text/css" href="/assets/stylesheet/mystyle.css">
+</head>
+<body>
+<div>
+<% include navigation/header.ejs %>
+</div>
+<div>
+<% include navigation/user-navigation.ejs %>
+</div>
+<% include navigation/site-navigation.ejs %>
+<div>
+  <aside>
+    <div class="exercise_containts">
+    <div class="barbelldiv">
+    <div class="barbell">
+
+    <p class="item_barbell">Exercises > <%= item.itemCategory %> > <%= item.itemName %>  </p>
+    <h2 id="barbell_title"><%= item.itemName %></h2>
+    <p><%= item.itemCategory %></p>
+    <br>
+    <img class="workout_Image" src="<%= item.itemURL %>" alt="Workout Image">
+    <br>
+    <br>
+
+    <div class="btn_star_align_div">
+
+    <a href="/categories" class="a_button"> <img src="/assets/images/back.png" class="save_image" alt="Back"> Back </a>
+
+    <form method="Post" action="/profile/myItems" id="save_form">
+    <input type="hidden" name="itemCode" value="<%= item.itemCode %>"/>
+    <input type="hidden" name="action" value="save"/>
+    <a href="javascript:{}" onclick="document.getElementById('save_form').submit();" class="a_button"><img src="/assets/images/save.png" class="save_image" alt="Save it">Save it</a></p>
+    </form>
+
+
+    <a href="/categories/item/feedback/<%=item.itemCode %>" class="a_button"><img src="/assets/images/star.png" class="save_image" alt="Rate">Rate it</a>
+
+    <%
+
+
+    for(let i=0; i< item.itemRating ; i++)
+    {
+      %>
+      <span class="filled_star">★</span>
+  <%  } %>
+
+  <%
+  for(let i=0; i< (5-item.itemRating) ; i++)
+  {
+    %>
+    <span class="filled_star">☆</span>
+<%  } %>
+
+
+
+</div>
+    </div>
+    <br>
+    <h2>Instructions : </h2>
+    <br>
+
+   <p>
+    <%= item.itemDescription %>
+
+  </div>
+</div>
+  </aside>
+</div>
+      <% include navigation/footer.ejs %>
+</body>
+</html>

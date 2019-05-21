@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="UTF-8">
+  <title>
+  FITNESS GUIDE
+  </title>
+<link rel="stylesheet" type="text/css" href="/assets/stylesheet/mystyle.css">
+</head>
+<body>
+<div>
+<% include navigation/header.ejs %>
+</div>
+<div>
+<% include navigation/user-navigation.ejs %>
+</div>
+<% include navigation/site-navigation.ejs %>
+<div>
+  <aside>
+        <div class="workout_plan_containts">
+    <h2> My Workouts plan</h2>
+
+    <br>
+    <table>
+      <tr>
+        <th></th>
+        <th>Exercise</th>
+        <th>Workout</th>
+        <th>My Rating</th>
+        <th>Made it</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <% for(let i=0; i < userItems.length ; i++) {
+      %>
+      <tr>
+        <td><img class="dumbell_sym" src="../assets/images/dumbell.png" alt=""></td>
+        <td><%= userItems[i].item.itemName %> </td>
+        <td><%= userItems[i].item.itemCategory %></td>
+        <td>
+          <%
+          for(let a=0; a< userItems[i].rating ; a++)
+          {
+            %>
+            <span class="filled_star">★</span>
+
+        <%  } %>
+        <%
+        for(let b=0; b< (5-userItems[i].rating) ; b++)
+        {
+          %>
+          <span class="filled_star">☆</span>
+      <%  } %>
+        </td>
+
+        <% if( userItems[i].madeIt == true )
+        { %>
+          <td><input type="checkbox"  disabled="disabled" checked></td>
+        <% }
+        else
+        { %>
+          <td><input type="checkbox"  disabled="disabled" ></td>
+        <% }
+
+        let itemList=[];
+        for(let j=0;j< userItems.length; j++)
+        {
+          itemList.push(userItems[j].item.itemCode);
+        }
+
+          %>
+
+
+        <td>
+          <form method="Post" action="/profile/myItems" id="update_form<%= i %>">
+
+          <input type="hidden" name="itemList" value="<%= itemList %>"/>
+          <input type="hidden" name="currentRating" value="<%= userItems[i].rating %>"/>
+          <input type="hidden" name="currentFlag" value="<%= userItems[i].madeIt %>"/>
+          <input type="hidden" name="itemCode" value="<%= userItems[i].item.itemCode %>"/>
+          <input type="hidden" name="action" value="updateProfile"/>
+          <a href="javascript:{}" onclick="document.getElementById('update_form<%= i %>').submit();" class="a_button">Update</a></p>
+          </form>
+
+        </td>
+
+        <td>
+          <form method="Post" action="/profile/myItems" id="delete_form<%= i %>">
+          <input type="hidden" name="itemCode" value="<%= userItems[i].item.itemCode %>"/>
+          <input type="hidden" name="action" value="deleteItem"/>
+          <input type="hidden" name="itemList" value="<%= itemList %>"/>
+          <a href="javascript:{}" onclick="document.getElementById('delete_form<%= i %>').submit();" class="a_button">Delete</a></p>
+          </form>
+
+        </td>
+
+      </tr>
+    <% } %>
+
+      </table>
+      <div class="myitem_bottom_content">
+        <p><img class="dumbell_sym" src="../assets/images/dumbell.png" alt=""> indicate that this workout belong to you.</p>
+        <p> Click <a href="/categories">here </a> to add a new workout! </p>
+      </div>
+    </div>
+      </aside>
+</div>
+      <% include navigation/footer.ejs %>
+</body>
+</html>

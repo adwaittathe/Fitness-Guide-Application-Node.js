@@ -1,0 +1,11 @@
+
+<header class="head">
+      <img class="head_back_image" src="/assets/images/topbar/fit.jpg" alt="">
+      <% if (signIn == null) { %>
+      <h3 class="sign_in">Not signed in . </h3>
+  <%  }
+  else { %>
+      <h3 class="sign_in">Welcome <%=signIn.firstName%> </h3>
+<%  } %>
+      <h1 class="web_title">FITNESS GUIDE</h1>
+</header>

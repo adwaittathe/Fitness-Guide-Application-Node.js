@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="UTF-8">
+  <title>
+  FITNESS GUIDE
+  </title>
+<link rel="stylesheet" type="text/css" href="/assets/stylesheet/mystyle.css">
+</head>
+<body>
+<div>
+<% include navigation/header.ejs %>
+</div>
+<div>
+<% include navigation/user-navigation.ejs %>
+</div>
+<% include navigation/site-navigation.ejs %>
+<div>
+      <aside>
+      <div class ="login_div">
+        <h1> Welcome to Fitness Guide </h1>
+        <br>
+        <p>Please enter your username and password to sign in. </p>
+        <br>
+        <form method="post" action="/profile/myItems">
+        <label for="username">Username : </label> <input type="text" id="username" name="username" placeholder="Enter Username">
+        <br>
+
+
+        <label for="password">Password : </label>  <input type="password" id="password" name="password" placeholder="Enter Password">
+        <input type="hidden" name="action" value="signIn">
+        <br>
+        <br>
+        <input type="submit" class="login_button" value="submit">
+        </form>
+
+      </div>
+      <div class="footer_img">
+        <img src="assets/images/work_harder_1.jpg" alt="work harder">
+      </div>
+      </aside>
+</div>
+      <% include navigation/footer.ejs %>
+      <script src="../controller/Profile.js" type="text/javascript"> </script>
+</body>
+</html>

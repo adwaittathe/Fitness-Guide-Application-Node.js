@@ -1,0 +1,48 @@
+  <!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="UTF-8">
+  <title>
+  FITNESS GUIDE
+  </title>
+<link rel="stylesheet" type="text/css" href="/assets/stylesheet/mystyle.css">
+</head>
+<body>
+<div>
+<% include navigation/header.ejs %>
+</div>
+<div>
+<% include navigation/user-navigation.ejs %>
+</div>
+<% include navigation/site-navigation.ejs %>
+<div>
+  <aside>
+      <div class="exercise_containts">
+      <%
+          for(let i=0; i< category.length ; i++) { %>
+        <div>
+        <p>
+
+        <img class="workout" src="<%=category[i].categoryImage %>" alt="Chest Workout">
+        <div>
+          <p class="wrk_title"><%=category[i].categoryName %></p>
+          <ul>
+            <% for(let j=0; j< data.length ;j++ ) {
+              if(category[i].categoryName === data[j].itemCategory)
+              { %>
+                <li><a href="/categories/item/<%=data[j].itemCode%>"> <%=data[j].itemName %></a> </li>
+            <%  }
+          }
+              %>
+          </ul>
+        </div>
+      </div>
+      <br><br><br>
+      <% } %>
+
+  </div>
+  </aside>
+</div>
+      <% include navigation/footer.ejs %>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<nav class="main_links">
+
+<ul>
+  <% if (signIn == null) { %>
+    <li> <a href="/login"> Sign In </a> </li>
+<%  }
+else { %>
+  <li>
+    <form method="Post" action="/profile/myItems" id="signout_form">
+      <input type="hidden" name="action" value="signOut"/>
+      <a href="javascript:{}" onclick="document.getElementById('signout_form').submit();">Sign out</a>
+  </form></li>
+<%  } %>
+
+
+<li>
+  <form method="Post" action="/profile/myItems" id="workout_form">
+    <input type="hidden" name="action" value="myWorkouts"/>
+    <a href="javascript:{}" onclick="document.getElementById('workout_form').submit();">My Workouts</a>
+  </form></li>
+<li>
+  <a href="#">Cart</a>
+</li>
+
+</ul>
+</nav>
